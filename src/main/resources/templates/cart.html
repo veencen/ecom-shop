@@ -24,8 +24,10 @@
             <td th:text="${product.getKey().getName()}"></td>
             <td th:text="${product.getValue()}"></td>
             <td th:text="${product.getKey().getPrice()} + ' VND'"></td>
-            <th th:href="@{'/cart/remove/{id}'(id=${product.getKey().getId()})}" class="col-md-1">
-                <button type="button" class="btn btn-primary" th:text="#{cart.remove}"></button>
+            <th class="col-md-1">
+                <a th:href="@{'/cart/remove/{id}'(id=${product.getKey().getId()})}" class="col-md-1">
+                    <button type="button" class="btn btn-primary" th:text="#{cart.remove}"></button>
+                </a>
             </th>
         </tr>
         </tbody>
